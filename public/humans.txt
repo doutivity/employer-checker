@@ -4,7 +4,7 @@
     Profile: https://github.com/YaroslavPodorvanov
     From: Ukraine
 
-    Name: ChatGPT
+    Name: ChatGPT, Claude
     Role: AI
-    Profile: https://chatgpt.com/
+    Profile: https://chatgpt.com/, https://claude.ai/
     From: USA
