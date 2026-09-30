@@ -2,30 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employer сhecker</title>
-    <meta name="author" content="Yaroslav and ChatGPT">
-    <meta name="description" content="Generate a useful links to check if a company is good to work for">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Employer Checker: research a company before you accept an offer</title>
+    <meta name="description" content="Generate useful links to check whether a company is a good place to work: registries, employee reviews, salaries, funding, clients and engineering activity.">
+    <meta name="author" content="Yaroslav Podorvanov">
+    <link rel="canonical" href="https://employer-checker.u8hub.com/">
 
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Employer Checker">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://employer-checker.u8hub.com/">
+    <meta property="og:title" content="Employer Checker: research a company before you accept an offer">
+    <meta property="og:description" content="One query, 30+ search links: company registries, employee reviews, salaries, funding, clients and engineering activity.">
+    <meta property="og:image" content="https://employer-checker.u8hub.com/og-image.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Employer Checker logo: a magnifying glass with a check mark">
 
-    <script src="https://cdn.tailwindcss.com/3.4.5"></script>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Employer Checker: research a company before you accept an offer">
+    <meta name="twitter:description" content="One query, 30+ search links: company registries, employee reviews, salaries, funding, clients and engineering activity.">
+    <meta name="twitter:image" content="https://employer-checker.u8hub.com/og-image.png">
+    <meta name="twitter:image:alt" content="Employer Checker logo: a magnifying glass with a check mark">
+
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <meta name="theme-color" content="#2563eb">
+
+    <link rel="stylesheet" href="/style.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Employer Checker",
+        "url": "https://employer-checker.u8hub.com/",
+        "description": "Generate useful links to check whether a company is a good place to work.",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Any",
+        "isAccessibleForFree": true,
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "image": "https://employer-checker.u8hub.com/og-image.png",
+        "author": { "@type": "Person", "name": "Yaroslav Podorvanov", "url": "https://github.com/YaroslavPodorvanov" },
+        "sameAs": ["https://github.com/doutivity/employer-checker"]
+    }
+    </script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GTJSMLBLP4"></script>
@@ -37,134 +61,49 @@
       gtag('config', 'G-GTJSMLBLP4');
     </script>
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
-    <div class="w-full max-w-3xl p-6 bg-white rounded-lg shadow-md">
-        <div class="flex items-center justify-between mb-4">
-            <h1 class="text-2xl font-bold text-center flex-1">Employer сhecker</h1>
-            <iframe src="https://ghbtns.com/github-btn.html?user=doutivity&repo=employer-checker&type=star&count=true"
-                    frameborder="0"
-                    scrolling="0"
-                    width="150"
-                    height="20"
-                    title="GitHub"
-                    class="ml-4">
-            </iframe>
+<body>
+<main class="card">
+    <header class="header">
+        <img src="/favicon.svg" alt="" width="40" height="40">
+        <h1>Employer Checker</h1>
+        <a class="github" href="https://github.com/doutivity/employer-checker" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            Star on GitHub
+        </a>
+    </header>
+    <p class="lead">Enter a company name and get ready-made Google searches across registries, review sites, salary data and funding databases.</p>
+
+    <form id="search-form" role="search">
+        <label for="query">Company name</label>
+        <textarea id="query" name="q" rows="2" placeholder="e.g. Grammarly" autocomplete="off" required></textarea>
+        <button type="submit" class="btn">Search</button>
+    </form>
+
+    <noscript><p>This tool needs JavaScript to generate search links.</p></noscript>
+
+    <section id="results" class="results" aria-labelledby="results-title" hidden>
+        <div class="results-bar">
+            <h2 id="results-title">Search links</h2>
+            <button type="button" id="copy-link" class="btn-link">Copy link</button>
         </div>
+        <p id="status" class="status" aria-live="polite"></p>
+        <div id="groups" class="groups"></div>
+    </section>
 
-        <textarea id="query" placeholder="Enter your query here" class="w-full p-3 border border-gray-300 rounded mb-4"></textarea>
-        <button onclick="generateLinks()" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition">
-            Search
-        </button>
+    <section class="about">
+        <h2>Why check an employer?</h2>
+        <p>A job offer tells you what the company wants you to know. Before you sign, it is worth looking at what others say and what public records show. Employer Checker builds one Google <code>site:</code> search per source, so you can review everything in a few minutes.</p>
+        <ul>
+            <li><strong>Legal &amp; registries:</strong> Opendatabot, YouControl, Estonian e-Äriregister, UK Companies House, OpenCorporates, SEC EDGAR.</li>
+            <li><strong>Employee reviews &amp; salaries:</strong> Glassdoor, Indeed, Blind, Levels.fyi, Kununu, DOU.</li>
+            <li><strong>Clients &amp; funding:</strong> Clutch, Upwork, GoodFirms, Crunchbase, Dealroom, PitchBook, Y Combinator.</li>
+            <li><strong>Engineering &amp; social:</strong> GitHub, GitLab, Hacker News, Reddit, LinkedIn.</li>
+        </ul>
+        <p>The tool is free and open source. Nothing you type is stored on a server, and the query lives only in the page URL so you can share it.</p>
+    </section>
+</main>
 
-        <div class="links-container mt-6 hidden" id="links-container">
-            <!-- Links will be generated here -->
-        </div>
-    </div>
-
-<script>
-    const searchGroups = {
-        General: [
-            { name: 'DOU', site: 'dou.ua' },
-            { name: 'LinkedIn', site: 'linkedin.com' }
-        ],
-        Legal: [
-            { name: 'Opendatabot', site: 'opendatabot.ua' },
-            { name: 'YouControl', site: 'youcontrol.com.ua' },
-            { name: 'e-Äriregister', site: 'ariregister.rik.ee' },
-            { name: 'GOV.UK', site: 'find-and-update.company-information.service.gov.uk' },
-            { name: 'Торговельна марка', site: 'iprop-ua.com' }
-        ],
-        Business: [
-            { name: 'Clutch', site: 'clutch.co' },
-            { name: 'Upwork', site: 'upwork.com' },
-            { name: 'GoodFirms', site: 'goodfirms.co' }
-        ],
-        Startup: [
-            { name: 'Crunchbase', site: 'crunchbase.com' },
-            { name: 'Dealroom', site: 'app.dealroom.co' },
-            { name: 'PitchBook', site: 'pitchbook.com' },
-            { name: 'Y Combinator', site: 'ycombinator.com' }
-        ],
-        Other: [
-            { name: 'Blind', site: 'teamblind.com' },
-            { name: 'Levels.fyi', site: 'levels.fyi' },
-            { name: 'Glassdoor', site: 'glassdoor.com' },
-            { name: 'Indeed', site: 'indeed.com' },
-            { name: 'GitHub', site: 'github.com' },
-            { name: 'GitLab', site: 'gitlab.com' },
-            { name: 'Welcome to the Jungle', site: 'app.welcometothejungle.com' },
-            { name: 'Facebook', site: 'facebook.com' },
-            { name: 'Instagram', site: 'instagram.com' }
-        ]
-    };
-
-    const $query = document.getElementById('query');
-    const $linksContainer = document.getElementById('links-container');
-
-    function generateLinks() {
-        const query = $query.value.trim();
-        $linksContainer.innerHTML = '';
-
-        if (!query) {
-            $linksContainer.classList.add('hidden');
-
-            const url = new URL(window.location.href);
-            url.searchParams.delete('q');
-            window.history.pushState({}, '', url);
-
-            return;
-        }
-
-        {
-            const url = new URL(window.location.href);
-            url.searchParams.set('q', query);
-            window.history.pushState({}, '', url);
-        }
-
-        for (const group in searchGroups) {
-            const groupTitle = document.createElement('h3');
-            groupTitle.textContent = group;
-            groupTitle.classList.add('text-xl', 'font-bold', 'mt-4');
-            $linksContainer.appendChild(groupTitle);
-
-            const linkList = document.createElement('ul');
-            linkList.classList.add('list-none', 'mt-2');
-
-            searchGroups[group].forEach(item => {
-                const listItem = document.createElement('li');
-                listItem.classList.add('mb-2');
-
-                const anchor = document.createElement('a');
-                anchor.href = `https://www.google.com/search?q=${encodeURIComponent(`site:${item.site} ${query}`)}`;
-                anchor.target = '_blank';
-                anchor.classList.add('text-blue-500', 'hover:underline', 'flex', 'items-center');
-                anchor.innerHTML = `<img src="https://www.google.com/favicon.ico" class="w-4 h-4 mr-2" alt="Google icon"> ${item.name}`;
-                listItem.appendChild(anchor);
-
-                linkList.appendChild(listItem);
-            });
-
-            $linksContainer.appendChild(linkList);
-        }
-
-        $linksContainer.classList.remove('hidden');
-    }
-
-    {
-        const params = new URLSearchParams(window.location.search);
-        const queryParam = params.get('q');
-        if (queryParam) {
-            $query.value = decodeURIComponent(queryParam);
-            generateLinks();
-        }
-    }
-
-    $query.addEventListener('keydown', function(event) {
-        if (event.key === 'Enter' && !event.shiftKey) {
-            event.preventDefault();
-            generateLinks();
-        }
-    });
-</script>
+<script src="/sources.js"></script>
+<script src="/app.js"></script>
 </body>
 </html>

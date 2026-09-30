@@ -1,6 +1,4 @@
 User-agent: *
-Disallow: /auth/github
-Disallow: /auth/gitlab
-Disallow: /auth/bitbucket
+Allow: /
 
 Sitemap: https://employer-checker.u8hub.com/sitemap.xml
