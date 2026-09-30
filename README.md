@@ -28,10 +28,18 @@ Please also update the table above and the "Why check an employer?" list in `pub
 ## Run locally
 
 The site is plain static HTML, CSS and JavaScript with no build step.
+Tasks are defined in the [`justfile`](justfile) (requires [just](https://github.com/casey/just) and Python 3):
 
 ```sh
-python3 -m http.server 8000 -d public
+just dev                # serve on http://localhost:8000 and open the browser
+just dev "Grammarly"    # same, with a prefilled query (?q=Grammarly)
+just serve              # serve only
+PORT=9000 just dev      # use another port
+just check              # validate manifest, JSON-LD, sitemap and local file references
+just assets             # regenerate icons and og-image.png
 ```
+
+Without just: `python3 -m http.server 8000 -d public`.
 
 ## Icons and Open Graph image
 
@@ -39,7 +47,7 @@ All icons and `og-image.png` are generated from one geometry definition:
 
 ```sh
 pip install pillow
-python3 scripts/generate_assets.py
+just assets
 ```
 
 ## Deploy
