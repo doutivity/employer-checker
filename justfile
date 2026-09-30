@@ -16,6 +16,7 @@ serve:
 dev query="":
     #!/usr/bin/env bash
     set -euo pipefail
+    query={{quote(query)}}
     python3 -m http.server {{port}} --bind 127.0.0.1 --directory public &
     server=$!
     trap 'kill $server 2>/dev/null' EXIT INT TERM
@@ -24,8 +25,8 @@ dev query="":
         sleep 0.1
     done
     target="{{url}}/"
-    if [ -n "{{query}}" ]; then
-        target="$target?q=$(python3 -c 'import sys, urllib.parse; print(urllib.parse.quote(sys.argv[1]))' "{{query}}")"
+    if [ -n "$query" ]; then
+        target="$target?q=$(python3 -c 'import sys, urllib.parse; print(urllib.parse.quote(sys.argv[1]))' "$query")"
     fi
     echo "Opening $target (Ctrl+C to stop)"
     xdg-open "$target" >/dev/null 2>&1 || open "$target" >/dev/null 2>&1 || true
